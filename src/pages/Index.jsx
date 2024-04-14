@@ -1,4 +1,5 @@
-import { Box, VStack, Heading, Text, Image, HStack, Link } from "@chakra-ui/react";
+import { Box, VStack, Heading, Text, Image, HStack, Link as ChakraLink } from "@chakra-ui/react";
+import { Link as RouterLink } from 'react-router-dom';
 
 const Index = () => {
   return (
@@ -15,18 +16,18 @@ const Index = () => {
         <Text fontSize="lg">Van Buren was the first president to have been born a United States citizen. Of Dutch ancestry, he is the only president who spoke English as a second language, and was the first president from New York. As a founder of the Democratic Party, he reassembled the old Jeffersonian coalition by emphasizing his opposition to the national bank, high tariffs, and federal internal improvements.</Text>
 
         <HStack spacing={8} pt={8}>
-          <Link href="#" fontWeight="bold" fontSize="lg">
+          <ChakraLink as={RouterLink} to="/biography" fontWeight="bold" fontSize="lg">
             Biography
-          </Link>
-          <Link href="#" fontWeight="bold" fontSize="lg">
+          </ChakraLink>
+          <ChakraLink href="#" fontWeight="bold" fontSize="lg">
             Presidency
-          </Link>
-          <Link href="#" fontWeight="bold" fontSize="lg">
-            Legacy
-          </Link>
-          <Link href="#" fontWeight="bold" fontSize="lg">
+          </ChakraLink>
+          <ChakraLink href="#" fontWeight="bold" fontSize="lg">
+            Legacy 
+          </ChakraLink>
+          <ChakraLink href="#" fontWeight="bold" fontSize="lg">
             Gallery
-          </Link>
+          </ChakraLink>
         </HStack>
       </VStack>
     </Box>
